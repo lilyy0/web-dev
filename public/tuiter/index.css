@@ -1,5 +1,13 @@
 * {
-    font-family: Helvetica, Arial, Helvetica, sans-serif
+    font-family: Helvetica, Arial, sans-serif
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.wd-sidebar-text {
+    display: inline;
 }
 
 .wd-background-black {
@@ -20,11 +28,12 @@
 }
 
 .wd-search-bar {
-    color:white;
-    background-color: rgb(59,59,59);
-    border-radius: 10px;
-    padding: 6px;
-    width: 85%;
+    color:black;
+    background-color: white;
+    position: relative;
+    top: 0px;
+    right: 0px;
+    padding: 8px;
 }
 
 .wd-settings-button {
@@ -78,4 +87,15 @@
     font-size: 13px;
     color: rgb(110,118,125);
     margin: 2px;
+}
+
+.wd-search-icon {
+    z-index: 1;
+    position: relative;
+    top: 0px;
+    right: -16px;
+}
+
+.wd-blue-icon {
+    color: rgb(29, 155, 240);
 }
