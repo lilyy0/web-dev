@@ -1,0 +1,24 @@
+<head>
+    <link href="./test.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <ul>
+        {
+            ewq.filter(
+                function(dsa){
+                    return dsa > 50
+                })
+                .map(
+                function(rew) {
+                    return(
+                        <li>{rew}</li>
+                    )
+                })
+        }
+    </ul>      
+</body>
