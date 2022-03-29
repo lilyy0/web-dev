@@ -2,7 +2,7 @@ import PostSummaryList from "./PostSummaryList/index";
 
 const ExploreComponent = () => {
     return(
-        <div className="col-lg-6 col-md-7 col-8">
+        <div >
             <div className="row pb-2">
                 <div className="col-11"><input type="text" className="form-control rounded-pill mt-1 b-1"
                         placeholder="Search Tuitter" /></div>

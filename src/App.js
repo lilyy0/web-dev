@@ -8,7 +8,8 @@ import Tuiter from "./components/tuiter/index";
 import './App.css';
 import HelloWorld from "./components/hello-world";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import ExploreScreen from "./components/tuiter/ExploreScreen";
+import HomeScreen from './components/tuiter/home-screen';
 
 function App() {
   return (
@@ -23,7 +24,15 @@ function App() {
             element={<Labs />} />
           <Route path="/tuiter"
             exact={true}
-            element={<Tuiter />} />
+            element={<Tuiter />}>
+            <Route path="explore"
+              element={<ExploreScreen />} />
+            <Route index element={<HomeScreen />} />
+            {
+            // <Route path="notifications"
+            //   element={<NotificationScreen />} /> */
+              }
+          </Route>
         </Routes>
       </div>
     </BrowserRouter>
