@@ -22,9 +22,9 @@ const TuitListItem = ({ tuit }) => {
                     <td className="ps-3" style={{ width: '100%' }}>
                         <i className="fas fa-remove float-end"
                             onClick={() => deleteTuit(dispatch, tuit)}></i>
-                        <span className="fw-bold">{tuit.userName}</span>
+                        <span className="fw-bold">{tuit.postedBy.userName}</span>
                         {tuit.verified && <i className="ms-1 fas fa-badge-check"></i>}
-                        <span className="ms-1 text-secondary">@{tuit.handle}</span>
+                        <span className="ms-1 text-secondary">@{tuit.postedBy.userName}</span>
                         <div>
                             {tuit.tuit}
                         </div>

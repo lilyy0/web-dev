@@ -18,27 +18,48 @@ const TuitList = () => {
             topic: 'Miscellaneous', 
             postedBy: { 'username': 'user123' }, 
             handle: 'user123', 
-            stats: {
-                "comments": 123,
-                "retuits": 234,
-                "likes": 345
-            }
+            comment: 123,
+            retuits: 234,
+            likes: 345
         });
 
 
     return (
         <ul className="ttr-tuits list-group">
-            <button onClick={() =>
+                    <table style={{ width: "100%" }}>
+            <tr>
+                <td style={{ verticalAlign: 'top' }}>
+                    <img src={'./images/react_icon.png'}
+                        className="rounded-circle"
+                        style={{ width: '48px', margin: '16px' }} />
+                </td>
+                <td style={{ width: "100%" }}>
+                    <textarea 
+                        onChange={(e) =>
+                            setNewTuit({
+                                ...newTuit,
+                                tuit: e.target.value
+                            })}
+                        className="form-control"
+                        style={{
+                            width: "100%", color: "white",
+                            padding: "0px",
+                            paddingTop: "15px",
+                            backgroundColor: "black"
+                        }}
+                        placeholder="What's happening?"></textarea>
+                    <hr />
+                </td>
+                
+            </tr>
+            
+        </table>
+
+        <button onClick={() =>
                 createTuit(dispatch, newTuit)}
                 className="btn btn-primary float-end">
                 Tuit
             </button>
-            <textarea className="form-control w-75"
-                onChange={(e) =>
-                    setNewTuit({
-                        ...newTuit,
-                        tuit: e.target.value
-                    })}></textarea>
             {
                 tuits.map && tuits.map(tuit =>
                     <><TuitListItem key={tuit._id}
